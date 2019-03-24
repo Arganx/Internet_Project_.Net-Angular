@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/media/argan/57D07E7CC7F5EC74/Web/Projekt_internety2/Projekt_internety2.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}
