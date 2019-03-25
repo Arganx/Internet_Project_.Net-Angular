@@ -25,6 +25,7 @@ namespace Projekt_internety2
             services.AddScoped<UserService>();
             services.AddScoped<PossitionService>();
             services.AddScoped<PersonService>();
+            services.AddScoped<ClientService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory

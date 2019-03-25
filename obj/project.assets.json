@@ -12991,11 +12991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/argan/57D07E7CC7F5EC74/Web/Projekt_internety2/Projekt_internety2.csproj",
+      "projectUniqueName": "/media/argan/57D07E7CC7F5EC74/Web/Git/Internet_Project_.Net-Angular/Projekt_internety2.csproj",
       "projectName": "Projekt_internety2",
-      "projectPath": "/media/argan/57D07E7CC7F5EC74/Web/Projekt_internety2/Projekt_internety2.csproj",
+      "projectPath": "/media/argan/57D07E7CC7F5EC74/Web/Git/Internet_Project_.Net-Angular/Projekt_internety2.csproj",
       "packagesPath": "/home/argan/.nuget/packages/",
-      "outputPath": "/media/argan/57D07E7CC7F5EC74/Web/Projekt_internety2/obj/",
+      "outputPath": "/media/argan/57D07E7CC7F5EC74/Web/Git/Internet_Project_.Net-Angular/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
