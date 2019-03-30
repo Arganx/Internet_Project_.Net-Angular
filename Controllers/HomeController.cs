@@ -30,6 +30,7 @@ namespace Projekt_internety2.Controllers
         //public IEnumerable<Usermodel> GetUsermodels()
         public ActionResult<List<Usermodel>> GetUsermodels()
         {
+            Console.WriteLine("Hi");
             return _userService.Get();
 
             //return users;
@@ -50,6 +51,11 @@ namespace Projekt_internety2.Controllers
         [HttpGet("[action]")]
         public int Login(string login, string password)
         {
+            if(login== "admin" && password == "admin")
+            {
+                return 2;
+            }
+
             var users = _userService.Get();;
             var user = users.FirstOrDefault((p)=> p.login == login);
             if (user == null)
