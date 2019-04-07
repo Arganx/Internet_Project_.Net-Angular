@@ -58,11 +58,16 @@ namespace Projekt_internety2.Controllers
 
             var users = _userService.Get();;
             var user = users.FirstOrDefault((p)=> p.login == login);
-            if (user == null)
+            if (user == null || user.salt==null)
             {
                 return -1;
             }
-            else if(user.password != password)
+            
+            string saltS = user.salt;
+            byte[] salt = Convert.FromBase64String(saltS);
+            string EnteredPasswordHashed = Convert.ToBase64String(Encryption.PasswordHasher.ComputeHash(password,salt));
+
+            if(user.password != EnteredPasswordHashed)
             {
                 return 0;
             }
@@ -72,12 +77,18 @@ namespace Projekt_internety2.Controllers
         [HttpPost("[action]")]
         public Usermodel CreateUser(string login,string password)
         {
-            
+            byte[] salt = Encryption.PasswordHasher.GenerateSalt();
+            byte[] hashed = Encryption.PasswordHasher.ComputeHash(password,salt);
+            string saltS = Convert.ToBase64String(salt);
+            string has = Convert.ToBase64String(hashed);
+            Console.WriteLine("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIi");
+            Console.WriteLine("Hashed :"+ has);
             if(login == null || password==null)
             {
-                return new Usermodel("Error","Error");
+                return new Usermodel("Error","Error","Error");
             }
-            return _userService.Create(new Usermodel(login,password));
+            
+            return _userService.Create(new Usermodel(login,has,saltS));
             
         }
         

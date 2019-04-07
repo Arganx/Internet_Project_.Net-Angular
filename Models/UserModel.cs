@@ -18,11 +18,14 @@ namespace Projekt_internety2.Models
         public string login {get;set;}
         [BsonElement("password")]
         public string password {get;set;}
+         [BsonElement("salt")]
+        public string salt {get;set;}
 
-        public Usermodel(string login,string password)
+        public Usermodel(string login,string password, string salt)
         {
             this.login = login;
             this.password = password;
+            this.salt=salt;
         }
         
     }
